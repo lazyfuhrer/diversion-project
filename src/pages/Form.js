@@ -68,9 +68,19 @@ export default function Form() {
         justify={'center'}
         bg={useColorModeValue('gray.50', 'gray.800')}>
 
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}
+          borderRadius="20px"
+          bg={useColorModeValue('white', 'gray.700')}
+          boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+        >
+
           <Flex justifyContent="center" alignItems="center" mb="4">
-            <Icon as={AiOutlineUpload} boxSize="12" />
+            <Icon as={AiOutlineUpload} boxSize="12"
+              width=" 27%"
+              padding=" 10px"
+              borderRadius=" 27px" />
+            {/*             <Image src="https://i.postimg.cc/25DJLWfX/output-onlinegiftools.gif" width={100} height={100} alt="File Upload" /> */}
+
           </Flex>
 
           <Text fontWeight="bold" textAlign="center" mb="4">
@@ -92,9 +102,9 @@ export default function Form() {
               />
               <Input type="file" multiple={false} accept="video/*" onChange={(e) => {
                 if (e.target.files) {
-                    setVideo(e.target.files[0]);
+                  setVideo(e.target.files[0]);
                 }
-              }}/>
+              }} />
             </InputGroup>
           )}
 
@@ -102,8 +112,8 @@ export default function Form() {
             colorScheme="blue"
             disabled={!video || status === 'loading' || !createAsset}
             onClick={() => {
-                createAsset?.();
-              }}
+              createAsset?.();
+            }}
           >
             {status === 'loading' ? (
               <CircularProgress size="24px" color="blue.500" />
@@ -124,13 +134,14 @@ export default function Form() {
           ))}
 
           {error && <div>{error.message}</div>}
+
         </Stack>
         {/* SEPERATION */}
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Box
             rounded={'lg'}
             bg={useColorModeValue('white', 'gray.700')}
-            boxShadow={'lg'}
+            boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
             p={8}>
             <form onSubmit={handleSubmit}>
               <Stack spacing={4}>
@@ -189,9 +200,9 @@ export default function Form() {
             </form>
           </Box>
         </Stack>
-        
+
       </Flex>
-      
+
     </>
   );
 }
