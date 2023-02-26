@@ -17,7 +17,7 @@ import {
     return (
       <Box
       
-        color={useColorModeValue('gray.700', 'gray.200')}>
+        color={useColorModeValue('gray.700', 'gray.800')}>
         <Container
          >
           

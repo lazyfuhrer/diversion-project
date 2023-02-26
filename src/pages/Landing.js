@@ -20,7 +20,7 @@ function Landing() {
         spacing={{ base: 8, md: 14 }}
         // py={{ base: 20, md: 36 }}
         paddingTop='65px'
-        paddingBottom='30px'
+        paddingBottom='55px'
       >
         <Heading
           fontWeight={600}
