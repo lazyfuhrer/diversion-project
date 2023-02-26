@@ -17,6 +17,8 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from '@/components/Navbar';
+// import Footer from './components/Footer';
+import Footer from '@/components/Footer';
 //import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const fireChain = {
@@ -71,6 +73,7 @@ const clien = createReactClient({
 
 export default function App({ Component, pageProps }) {
   return (
+    <>
     <Provider value={client}>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains} coolMode>
@@ -82,6 +85,9 @@ export default function App({ Component, pageProps }) {
           </LivepeerConfig>
         </RainbowKitProvider>
       </WagmiConfig>
+      
     </Provider>  
+    <Footer/>
+    </>
   )
 }
