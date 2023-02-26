@@ -47,7 +47,7 @@ const fireChain = {
 const { chains, provider } = configureChains(
   [polygonMumbai, fireChain, goerli, mainnet, polygon, optimism, arbitrum],
   [
-    alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    alchemyProvider({ apiKey: "PwIu9eXDc12d70YQbkJVUX8PHUyQE8LV" }),
     publicProvider()
   ]
 );
@@ -68,7 +68,7 @@ const client = createClien({
 });
 
 const clien = createReactClient({
-  provider: studioProvider({ apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY }),
+  provider: studioProvider({ apiKey: "1181ec78-91c2-41c9-97e6-d435ad3bef1b" }),
 });
 
 export default function App({ Component, pageProps }) {
@@ -86,9 +86,7 @@ export default function App({ Component, pageProps }) {
           </LivepeerConfig>
         </RainbowKitProvider>
       </WagmiConfig>
-      
     </Provider>  
-    <Footer/>
     </>
   )
 }
