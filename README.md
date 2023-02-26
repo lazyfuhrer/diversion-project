@@ -35,5 +35,5 @@ pnpm dev
 ## Meet the Team
 * [@Ankur02Sarkar]
 * [@aharna]
-* [@lazyfuhrer]
+* [@lazyfuhrer](https://github.com/lazyfuhrer/)
 * [@Vimal2023]
