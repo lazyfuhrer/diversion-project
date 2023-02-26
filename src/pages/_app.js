@@ -20,7 +20,7 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from '@/components/Navbar';
-
+import Footer from '@/components/Footer';
 const { chains, provider } = configureChains(
   [polygonMumbai, mainnet, polygon, optimism, arbitrum, goerli],
   [
@@ -61,6 +61,7 @@ export default function App({ Component, pageProps }) {
           </LivepeerConfig>
         </RainbowKitProvider>
       </WagmiConfig>
+      <Footer/>
     </Provider>  
   )
 }

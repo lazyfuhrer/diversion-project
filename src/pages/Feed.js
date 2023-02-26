@@ -91,8 +91,8 @@ function Feed() {
         pauseOnHover
       />
       {data['videos'].map((item, idx) => (
-        <Box m="30px 0px">
-          <Box key={item.id} w={600} h={700} justifyContent='center' m='auto' display="flex" gap="30px">
+        <Box m="30px 0px" >
+          <Box key={item.id} w={600} h={600} justifyContent='center' m='auto' display="flex" gap="10px">
             <Player
               title={item.title}
               playbackId={item.playbackID}
