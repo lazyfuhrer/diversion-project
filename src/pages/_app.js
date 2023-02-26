@@ -17,6 +17,7 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from '@/components/Navbar';
+// import Footer from './components/Footer';
 import Footer from '@/components/Footer';
 //import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
@@ -85,6 +86,7 @@ export default function App({ Component, pageProps }) {
           </LivepeerConfig>
         </RainbowKitProvider>
       </WagmiConfig>
+      
     </Provider>  
     <Footer/>
     </>

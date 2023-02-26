@@ -1,3 +1,4 @@
+
 import Landing from "./Landing";
 import Head from "next/head";
 import Footer from "../components/Footer"
