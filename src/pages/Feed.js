@@ -35,6 +35,7 @@ function Feed() {
 
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
+  console.log(data['videos'])
 
   console.log(data['videos']);
 
@@ -44,7 +45,7 @@ function Feed() {
       const videoCreator = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
       const tip = '0.05';
       const tipAmount = ethers.utils.parseEther(tip);
-      const tx = await videoLibraryContract.tipOwner(videoCreator, {
+      const tx = await videoLibraryContract.tipCreator(videoCreator, {
         value: tipAmount,
       });
       toast.update(sendToast, {
@@ -111,7 +112,7 @@ function Feed() {
             />
             <Box display="flex" width="130px" flexDirection="column" alignItems="center" gap="20px" justifyContent="center">
               <Box display="flex" flexDirection="column" alignItems="center" backgroundColor="" padding="10px" borderRadius="20px" width="100%" cursor="pointer">
-                <TbHeartHandshake size={35} />
+                <TbHeartHandshake onClick={tipOwner} size={35} />
                 <Text>Support</Text>
               </Box>
               <Box display="flex" flexDirection="column" alignItems="center" backgroundColor="" padding="10px" borderRadius="20px" width="100%" cursor="pointer" onClick={() => changeColor(idx)}>
