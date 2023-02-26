@@ -4,6 +4,7 @@ import {
   Container,
   Text,
   Button,
+  Image,
   Stack,
   Icon,
   useColorModeValue,
@@ -13,7 +14,7 @@ import {
 
 function Landing() {
 return (
-  <Container maxW={"3xl"}>
+  <Container maxW={"3xl"} backgroundImage="url(https://i.postimg.cc/bJ9JNTgY/output-onlinegiftools.gif)" backgroundRepeat="no-repeat" backgroundSize="100% 100%" marginTop="100px">
     <Stack
       as={Box}
       textAlign={"center"}
@@ -39,7 +40,7 @@ return (
         </Text>
       </Heading>
       <Text color={"gray.500"}>
-        Monetize your content by charging your most loyal viewers
+        A Secure & Transparent way to stream your content, powered by the Blockchain
       </Text>
       <Stack
         direction={"column"}
@@ -66,6 +67,7 @@ return (
         
       </Stack>
     </Stack>
+{/*     <Image src="https://keendomains.files.wordpress.com/2022/12/blockchain-2-gif.gif"/> */}
   </Container>
 );
 }
