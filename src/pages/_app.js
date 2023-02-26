@@ -8,10 +8,7 @@ import {
 
 import '@rainbow-me/rainbowkit/styles.css';
 import {
-  ConnectButton,
-  darkTheme,
   getDefaultWallets,
-  midnightTheme,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, goerli, WagmiConfig } from 'wagmi';
@@ -20,9 +17,33 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from '@/components/Navbar';
+//import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+
+const fireChain = {
+  id: 997,
+  name: '5ire Testnet',
+  network: '5ire',
+  iconUrl: 'https://example.com/icon.svg',
+  iconBackground: '#fff',
+  nativeCurrency: {
+    decimals: 18,
+    name: '5ire Testnet',
+    symbol: '5IRE',
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc-testnet.5ire.network'],
+    },
+  },
+  blockExplorers: {
+    default: { name: '5ireScan', url: 'https://explorer.5ire.network/evm' },
+    etherscan: { name: '5ireScan', url: 'https://explorer.5ire.network/evm' },
+  },
+  testnet: true,
+};
 
 const { chains, provider } = configureChains(
-  [polygonMumbai, mainnet, polygon, optimism, arbitrum, goerli],
+  [polygonMumbai, fireChain, goerli, mainnet, polygon, optimism, arbitrum],
   [
     alchemyProvider({ apiKey: "wOpAEigBzxZiFz8pAjpEeFkX9T0_PM_m" }),
     publicProvider()

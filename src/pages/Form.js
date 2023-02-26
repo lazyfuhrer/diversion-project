@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import useVideoLibraryContract from 'utils/useVideoLibraryContract';
 import { AiOutlineUpload } from 'react-icons/ai';
-import { useCreateAsset } from '@livepeer/react';
+import { useCreateAsset, useUpdateAsset } from '@livepeer/react';
 
 export default function Form() {
   const videoLibraryContract = useVideoLibraryContract();
@@ -35,7 +35,7 @@ export default function Form() {
     progress,
     error,
   } = useCreateAsset(
-    video ? { sources: [{ name: video.name, file: video }] } : null,
+    video ? { sources: [{ name: video.name, file: video }], } : null,
   );
 
   const handleInputChange = (event) => {
@@ -59,6 +59,19 @@ export default function Form() {
       ipfsHash: '',
     });
   };
+
+
+  const saveVid = async () => {
+    // console.log(assets);
+    console.log(assets, 'hey');
+    const title = assets?.[0]?.name;
+    const playbackID = assets?.[0]?.playbackId;
+    const assetID = assets?.[0]?.id;
+    const ipfsHash = 'Noooooo';
+    const tx = await videoLibraryContract.addVideo(title, playbackID, assetID, ipfsHash);
+    alert(`Transaction hash: ${tx.hash}`);
+  }
+  
 
   return (
     <>
@@ -103,6 +116,7 @@ export default function Form() {
             disabled={!video || status === 'loading' || !createAsset}
             onClick={() => {
                 createAsset?.();
+                // saveVid();
               }}
           >
             {status === 'loading' ? (
@@ -112,7 +126,9 @@ export default function Form() {
             )}
           </Button>
 
-          {assets?.map((asset) => (
+          {assets && saveVid()}
+
+          {/* {assets?.map((asset) => (
             <div key={asset.id}>
               <div>
                 <div>Title: {asset?.name}</div>
@@ -121,7 +137,7 @@ export default function Form() {
                 <div>IPFS CID: {asset?.storage?.ipfs?.cid ?? 'None'}</div>
               </div>
             </div>
-          ))}
+          ))} */}
 
           {error && <div>{error.message}</div>}
         </Stack>
