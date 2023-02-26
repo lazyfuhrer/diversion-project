@@ -49,7 +49,7 @@ function Feed() {
         value: tipAmount,
       });
       toast.update(sendToast, {
-        render: `Sending ${tip} MATIC 💰`,
+        render: `Sending ${tip} ERC-20 token 💰`,
         type: "default",
         isLoading: true,
       });

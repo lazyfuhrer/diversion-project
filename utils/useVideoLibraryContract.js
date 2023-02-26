@@ -1,8 +1,6 @@
 import { useContract, useSigner } from "wagmi";
-import ensRegistryABI from "contracts/ensRegistryABI.json";
-
+import ensRegistryABI from "../abi/ensRegistryABI";
 const useVideoLibraryContract = () => {
-
     try {
         const { data: signer, isError, isLoading } = useSigner()
         const videoLibraryContract = useContract({
