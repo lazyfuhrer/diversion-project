@@ -23,6 +23,7 @@ const TodosQuery = `
 `;
 
 function Feed() {
+  const mounted = useIsMounted();
   const [color, setColor] = useState(Array(10).fill("white"))
   const { data: signer, isError, isLoading } = useSigner()
   const [result, reexecuteQuery] = useQuery({
