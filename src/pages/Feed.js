@@ -23,7 +23,7 @@ const TodosQuery = `
 `;
 
 function Feed() {
-  const mounted = useIsMounted();
+  //const mounted = useIsMounted();
   const [color, setColor] = useState(Array(10).fill("white"))
   const { data: signer, isError, isLoading } = useSigner()
   const [result, reexecuteQuery] = useQuery({
@@ -41,10 +41,10 @@ function Feed() {
   const tipOwner = async () => {
     const sendToast = toast.loading("Please Sign Message ✍️");
     try {
-      const videoAuthor = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
+      const videoCreator = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
       const tip = '0.05';
       const tipAmount = ethers.utils.parseEther(tip);
-      const tx = await videoLibraryContract.tipToOwner(videoAuthor, {
+      const tx = await videoLibraryContract.tipOwner(videoCreator, {
         value: tipAmount,
       });
       toast.update(sendToast, {

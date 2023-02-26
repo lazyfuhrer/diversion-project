@@ -15,8 +15,11 @@ import useVideoLibraryContract from 'utils/useVideoLibraryContract';
 import { AiOutlineUpload } from 'react-icons/ai';
 import { useAsset, useCreateAsset, useUpdateAsset } from '@livepeer/react';
 import { useAccount } from 'wagmi';
+import { useIsMounted } from 'utils/useIsMounted';
+
 
 export default function Home() {
+  const mounted = useIsMounted();
   const [assetId, setAssetId] = useState(null);
   const videoLibraryContract = useVideoLibraryContract();
   const [video, setVideo] = useState(null);
@@ -53,6 +56,8 @@ export default function Home() {
     setAssetId(assets?.[0]?.id);
   }
 
+  const creator = address;
+
   const saveVideo = async (e) => {
   
     while (!asset?.storage?.ipfs?.cid) {
@@ -69,7 +74,7 @@ export default function Home() {
     const assetID = asset?.id;
     const ipfsHash = asset?.storage?.ipfs?.cid;
   
-    const tx = await videoLibraryContract.addVideo(title, playbackID, assetID, ipfsHash);
+    const tx = await videoLibraryContract.addVideo(title, playbackID, assetID, ipfsHash, creator);
     alert(`Transaction hash: ${tx.hash}`);
   }
 
