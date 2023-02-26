@@ -37,7 +37,7 @@ function Navbar() {
         <Link as={NextLink} href='/Feed'>
           <Button bg='gray' variant="ghost" mx={{base: '0', sm: '20'}} _hover={{ color: "gray.500" }} color="white">Home</Button>
         </Link>
-        <Link as={NextLink} href='/Form'>
+        <Link as={NextLink} href='/Upload'>
           <Button bg='gray' color={'white'} variant="ghost" _hover={{ color: "gray.500" }} >Upload</Button>
         </Link>
       </Flex>

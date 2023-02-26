@@ -18,7 +18,7 @@ import { useAccount } from 'wagmi';
 import { useIsMounted } from 'utils/useIsMounted';
 
 
-export default function Home() {
+export default function Upload() {
   const mounted = useIsMounted();
   const [assetId, setAssetId] = useState(null);
   const videoLibraryContract = useVideoLibraryContract();
