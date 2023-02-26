@@ -31,3 +31,9 @@ pnpm dev
 * GraphQL
 * Livepeer
 * ether.js
+
+## Meet the Team
+* @Ankur02Sarkar
+* @aharna
+* @lazyfuhrer
+* @Vimal2023
