@@ -23,7 +23,7 @@ function About() {
       linkedin: "https://www.linkedin.com/in/aharna-haque-b44832219/"
     }, {
       name: "Vimal",
-      image: "https://media.licdn.com/dms/image/D4D03AQER0xtSvSWXDg/profile-displayphoto-shrink_800_800/0/1670436639887?e=1683158400&v=beta&t=Pw2zC8ZCQubR-KHTp4SxYYIG1sgPc6BfkAmBXtib9jc",
+      image: "https://avatars.githubusercontent.com/u/78069624?v=4",
       github: "https://github.com/Vimal2023",
       linkedin: "https://www.linkedin.com/in/vimal-anand-9917a1212/"
     },
