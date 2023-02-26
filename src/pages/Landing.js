@@ -20,7 +20,7 @@ function Landing() {
         spacing={{ base: 8, md: 14 }}
         // py={{ base: 20, md: 36 }}
         paddingTop='65px'
-        paddingBottom='60px'
+        paddingBottom='30px'
       >
         <Heading
           fontWeight={600}
@@ -63,10 +63,7 @@ function Landing() {
           <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
             Learn more
           </Button>
-          <Box>
-            
-            
-          </Box>
+          
         </Stack>
       </Stack>
     </Container>
