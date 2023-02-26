@@ -33,7 +33,7 @@ pnpm dev
 * ether.js
 
 ## Meet the Team
-* @Ankur02Sarkar
-* @aharna
-* @lazyfuhrer
-* @Vimal2023
+* [@Ankur02Sarkar]
+* [@aharna]
+* [@lazyfuhrer]
+* [@Vimal2023]
