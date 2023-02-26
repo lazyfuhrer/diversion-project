@@ -1,104 +1,113 @@
 [
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "id",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "playbackID",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "assetID",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "ipfsHash",
-          "type": "string"
-        }
-      ],
-      "name": "VideoAdded",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        { "internalType": "string", "name": "_title", "type": "string" },
-        { "internalType": "string", "name": "_playbackID", "type": "string" },
-        { "internalType": "string", "name": "_assetID", "type": "string" },
-        { "internalType": "string", "name": "_ipfsHash", "type": "string" }
-      ],
-      "name": "addVideo",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [{ "internalType": "uint256", "name": "_id", "type": "uint256" }],
-      "name": "getVideoById",
-      "outputs": [
-        { "internalType": "uint256", "name": "", "type": "uint256" },
-        { "internalType": "string", "name": "", "type": "string" },
-        { "internalType": "string", "name": "", "type": "string" },
-        { "internalType": "string", "name": "", "type": "string" },
-        { "internalType": "string", "name": "", "type": "string" }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getVideoCount",
-      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address payable",
-          "name": "videoAuthor",
-          "type": "address"
-        }
-      ],
-      "name": "tipToOwner",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "name": "videoIndex",
-      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "name": "videos",
-      "outputs": [
-        { "internalType": "uint256", "name": "id", "type": "uint256" },
-        { "internalType": "string", "name": "title", "type": "string" },
-        { "internalType": "string", "name": "playbackID", "type": "string" },
-        { "internalType": "string", "name": "assetID", "type": "string" },
-        { "internalType": "string", "name": "ipfsHash", "type": "string" }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    }
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "playbackID",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "assetID",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ipfsHash",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "creator",
+        "type": "string"
+      }
+    ],
+    "name": "VideoAdded",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_title", "type": "string" },
+      { "internalType": "string", "name": "_playbackID", "type": "string" },
+      { "internalType": "string", "name": "_assetID", "type": "string" },
+      { "internalType": "string", "name": "_ipfsHash", "type": "string" },
+      { "internalType": "string", "name": "_creator", "type": "string" }
+    ],
+    "name": "addVideo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "_id", "type": "uint256" }],
+    "name": "getVideoById",
+    "outputs": [
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "string", "name": "", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getVideoCount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "videoCreator",
+        "type": "address"
+      }
+    ],
+    "name": "tipCreator",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "videoIndex",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "videos",
+    "outputs": [
+      { "internalType": "uint256", "name": "id", "type": "uint256" },
+      { "internalType": "string", "name": "title", "type": "string" },
+      { "internalType": "string", "name": "playbackID", "type": "string" },
+      { "internalType": "string", "name": "assetID", "type": "string" },
+      { "internalType": "string", "name": "ipfsHash", "type": "string" },
+      { "internalType": "string", "name": "creator", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
 ]

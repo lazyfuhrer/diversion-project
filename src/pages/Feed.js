@@ -10,15 +10,16 @@ import { TbHeartHandshake } from "react-icons/tb";
 import { SlLike } from "react-icons/sl";
 import { useState } from "react";
 const TodosQuery = `
-query {
-videos {
-id
-title
-playbackID
-assetID
-ipfsHash
-}
-}
+  query {
+    videos {
+      id
+      title
+      playbackID
+      assetID
+      ipfsHash
+      creator
+    }
+  }
 `;
 
 function Feed() {

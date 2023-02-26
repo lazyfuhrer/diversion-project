@@ -63,7 +63,7 @@ const wagmiClient = createClient({
 })
 
 const client = createClien({
-  url: 'https://api.studio.thegraph.com/query/41353/video-data-graph/0.1',
+  url: 'https://api.thegraph.com/subgraphs/name/lazyfuhrer/diversion-video-info',
 });
 
 const clien = createReactClient({

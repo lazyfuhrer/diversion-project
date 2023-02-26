@@ -14,11 +14,14 @@ import {
 import useVideoLibraryContract from 'utils/useVideoLibraryContract';
 import { AiOutlineUpload } from 'react-icons/ai';
 import { useAsset, useCreateAsset, useUpdateAsset } from '@livepeer/react';
+import { useAccount } from 'wagmi';
 
 export default function Home() {
   const [assetId, setAssetId] = useState(null);
   const videoLibraryContract = useVideoLibraryContract();
   const [video, setVideo] = useState(null);
+  const { address } = useAccount();
+  console.log(address);
   const {
     mutate: createAsset,
     data: assets,
