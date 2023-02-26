@@ -17,7 +17,7 @@ function Footer() {
       position="absolute"
       top="100vh"
       width="100%"
-      color={useColorModeValue("gray.700", "gray.800")}
+      /*color={useColorModeValue("gray.700", "gray.800")}*/
     >
       <Container>
         <Text pt={8} fontSize={"sm"} textAlign={"center"} padding="15px">
