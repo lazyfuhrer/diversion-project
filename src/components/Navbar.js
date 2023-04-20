@@ -56,15 +56,15 @@ function Navbar() {
               <Button margin="20px 0px" ref={btnRef} colorScheme='blue' onClick={onClose}>
                 Home
               </Button></Link>
-            <Link as={NextLink} href='/Upload'>
+            <Link as={NextLink} href='/upload'>
               <Button margin="20px 0px" ref={btnRef} colorScheme='blue' onClick={onClose}>
                 Upload
               </Button></Link>
-            <Link as={NextLink} href='/Feed'>
+            <Link as={NextLink} href='/feed'>
               <Button margin="20px 0px" ref={btnRef} colorScheme='blue' onClick={onClose}>
                 Feed
               </Button></Link>
-            <Link as={NextLink} href='/About'>
+            <Link as={NextLink} href='/about'>
               <Button margin="20px 0px" ref={btnRef} colorScheme='blue' onClick={onClose}>
                 About us
               </Button></Link>
