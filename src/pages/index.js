@@ -1,5 +1,5 @@
 
-import Landing from "./Landing";
+import Landing from "./landing";
 import Head from "next/head";
 import Footer from "../components/Footer"
 

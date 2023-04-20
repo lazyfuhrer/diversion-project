@@ -73,19 +73,19 @@ const clien = createReactClient({
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Provider value={client}>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} coolMode>
-          <LivepeerConfig client={clien}>
-            <ChakraProvider>
-              <Navbar />
-              <Component {...pageProps} />
-              <Footer/>
-            </ChakraProvider>  
-          </LivepeerConfig>
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </Provider>  
+      <Provider value={client}>
+        <WagmiConfig client={wagmiClient}>
+          <RainbowKitProvider chains={chains} coolMode>
+            <LivepeerConfig client={clien}>
+              <ChakraProvider>
+                <Navbar />
+                <Component {...pageProps} />
+                <Footer/>
+              </ChakraProvider>  
+            </LivepeerConfig>
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </Provider>  
     </>
   )
 }
